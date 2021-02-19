@@ -1,6 +1,6 @@
 package ru.netology.domain;
 
-public class post {
+public class Post<CommentsInfo, PostSource, RepostsInfo> {
     private int id;
     private int timePublication; // время публикации поста
     private String namePost; // название поста
@@ -8,7 +8,7 @@ public class post {
     private String descriptionPost;// описание поста
     private boolean subscribe; //подписаться
     private long amountOfViews; // количество просмотров
-    private int share; // поделиться постом
+    private int share; // поделиться с записью
     private String attachmentsPost; //вложения
     private boolean addFavorite; // добавить в избранное
 
@@ -17,13 +17,15 @@ public class post {
     private double friendsOnly; //запись могут видеть только друзья
     private boolean fixPost; //запись закреплена
     private boolean noNotificationsPost; //не отправлять уведомления по активности на данном посте
-
+    private boolean markedAsAds; //информация о том, содержит ли запись отметку "реклама"
 
     private Author author;
-    private Comments commentsInfo;
-    private likes likes;
-
-
+    private CommentsInfo commentsInfo;
+    private Donut donut;
+    private Likesinfo likesInfo;
+    private Location location;
+    private  PostSource postSource;
+    private RepostsInfo repostsInfo;
 
     public Author getAuthor() {
         return author;
@@ -33,6 +35,53 @@ public class post {
         this.author = author;
     }
 
+    public CommentsInfo getCommentsInfo() {
+        return commentsInfo;
+    }
+
+    public void setCommentsInfo(CommentsInfo commentsInfo) {
+        this.commentsInfo = commentsInfo;
+    }
+
+    public Donut getDonut() {
+        return donut;
+    }
+
+    public void setDonut(Donut donut) {
+        this.donut = donut;
+    }
+
+    public Likesinfo getLikesInfo() {
+        return likesInfo;
+    }
+
+    public void setLikesInfo(Likesinfo likesInfo) {
+        this.likesInfo = likesInfo;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public PostSource getPostSource() {
+        return postSource;
+    }
+
+    public void setPostSource(PostSource postSource) {
+        this.postSource = postSource;
+    }
+
+    public RepostsInfo getRepostsInfo() {
+        return repostsInfo;
+    }
+
+    public void setRepostsInfo(RepostsInfo repostsInfo) {
+        this.repostsInfo = repostsInfo;
+    }
 
 
     public String getDevice() {
@@ -75,7 +124,13 @@ public class post {
         this.noNotificationsPost = noNotificationsPost;
     }
 
+    public boolean isMarkedAsAds() {
+        return markedAsAds;
+    }
 
+    public void setMarkedAsAds(boolean markedAsAds) {
+        this.markedAsAds = markedAsAds;
+    }
 
 
     public int getId() {

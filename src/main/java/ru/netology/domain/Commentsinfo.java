@@ -1,15 +1,15 @@
 package ru.netology.domain;
 
-public class Comments {
-    private int count; //число комментариев
-    private String next_commentsInfo; // следующий комментарий
-    private String firstNewCommentsInfo; //показать первый комментарий
-    private boolean canComment; //может ли пользователь прокомментировать запись
-    private boolean likeComment; //может ли пользователь поставить лайк  на комментрий
+public class Commentsinfo {
+    private int count; //число комментов
+    private String next_commentsInfo; // следующий коммент
+    private String firstNewCommentsInfo; //показать первый коммент
+    private boolean canComment; //может ли пользователь откомментировать запись
+    private boolean likeComment; //может ли пользователь лайкнуть комментарий
 
     private boolean canOpenComments; //может ли пользователь открыть все комментарии
-    private boolean canCloseComments; //может ли пользователь закрыть комментарии
-    private boolean canGroupsComment; //могут ли группы комментировать пост
+    private boolean canCloseComments; //может ли пользователь закрыть комментарии к записи
+    private boolean canGroupsComment; //могут ли сообщества комментировать запись
 
     public boolean isCanOpenComments() {
         return canOpenComments;
@@ -75,5 +75,3 @@ public class Comments {
         this.likeComment = likeComment;
     }
 }
-
-

@@ -38,4 +38,3 @@ public class Author {
         this.nameAuthor = nameAuthor;
     }
 }
-
